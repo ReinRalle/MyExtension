@@ -1,0 +1,110 @@
+// See https://go.microsoft.com/fwlink/?LinkId=733558
+// for the documentation about the tasks.json format
+{
+	"version": "2.0.0",
+	"options": {
+		"env": {
+			"MyVar1": "${workspaceFolder}",
+			"MyVar2": "%npm_package_name%",
+			"MyVar3": "%LANG%",
+			"MyVar4": "echo $(node -p \"require('./package.json').name\")",
+			"MyVar5": "${command:extension.pickNodeProcess}",
+			"MyVar6": "${command:extension.commandvariable.file.fileDirnamePosix}"
+		}
+	},
+	"presentation": {
+		"echo": true,
+		"reveal": "always",
+		"focus": true,
+		"panel": "shared",
+		"showReuseMessage": true,
+		"clear": false
+	},
+	"inputs": [{
+		"description": "select scope: [empty string => local]",
+		"id": "Scope_ID",
+		"type": "pickString",
+		"options": [
+			"--global",
+			"--no-global",
+			""
+		]
+	}],
+	"tasks": [{
+		"label": "npm --- watch",
+		"type": "npm",
+		"script": "watch1",
+		"problemMatcher": "$tsc-watch",
+
+		"detail": "task watch",
+		"isBackground": true,
+		"presentation": {
+			"reveal": "never"
+		},
+		"group": {
+			"kind": "build",
+			"isDefault": true
+		}
+	}, {
+		"label": "npm - ll (list installed packages - descriptions)",
+		"type": "shell",
+		"command": "npm ll ${input:Scope_ID} --depth 0"
+	}, {
+		"label": "npm - ls (list installed packages)",
+		"type": "shell",
+		"command": "npm ls ${input:Scope_ID} --depth 0"
+	}, {
+		"label": "npm - ll (list installed packages - pathes)",
+		"type": "shell",
+		"command": "npm ll ${input:Scope_ID} -p --depth 0"
+	}, {
+		"label": "npm - outdated (list)",
+		"type": "shell",
+		"command": "npm ${input:Scope_ID} outdated"
+	}, {
+		"label": "npm - update",
+		"type": "shell",
+		"command": "npm ${input:Scope_ID} update"
+	}, {
+		"label": "ncu (check updates)",
+		"type": "shell",
+		"command": "ncu ${input:Scope_ID}"
+	}, {
+		"label": "ncu -u (upgrade package.json)",
+		"type": "shell",
+		"command": "ncu ${input:Scope_ID} -u"
+	}, {
+		"label": "TODO: code --install-extension <package>.vsix",
+		"type": "shell",
+		"args": ["--help"],
+		"command": "\"C:\\Program Files\\Microsoft VS Code\\bin\\code.cmd\""
+	}, {
+		"label": "npm - install (get packages)",
+		"type": "shell",
+		"command": "npm install",
+		"detail": "code --install-extension <package>.vsix"
+	}, {
+		"label": "npm - install package",
+		"type": "shell",
+		"command": "echo ${workspaceFolder}\\%npm_package_name%"
+	}, {
+		"label": "check versions (1.node, 2.npm)",
+		"type": "shell",
+		"command": "node -v && npm -v"
+	}, {
+		"label": "test opt",
+		"type": "shell",
+		"command": "echo",
+		"args": ["%MyVar1%\\%LANG%\\%npm_package_name%\\${env:npm_package_name}"]
+	}, {
+		"label": "test npm env",
+		"type": "shell",
+		"command": "echo",
+		"args": ["%MyVar7%"]
+
+	}, {
+		"label": "npm - config ls -l ()",
+		"type": "shell",
+		"command": "npm c list --json",
+	}]
+}
