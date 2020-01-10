@@ -4,7 +4,7 @@
 	"description": "test some",
 	"version": "0.0.4",
 	"publisher": "reinralle",
-	"license": "SEE LICENSE IN 'LICENSE'",
+	"license": "MIT",
 	"private": true,
 	"icon": "images/Zahnrad.png",
 	"config": {
