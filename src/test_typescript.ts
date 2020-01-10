@@ -89,6 +89,6 @@ console.clear();
 
 test_color();
 test_console();
-// test_generator();
-// test_class();
-// test_array();
+test_generator();
+test_class();
+test_array();
