@@ -16,11 +16,13 @@
 		// "noImplicitReturns": true, /* Report error when not all code paths in function return a value. */
 		// "noFallthroughCasesInSwitch": true, /* Report errors for fallthrough cases in switch statement. */
 		// "noUnusedParameters": true,  /* Report errors on unused parameters. */
-		"noUnusedLocals": true, // Report errors on unused locals. 
-		"strictNullChecks": true // Enable strict null checks.
+		"noUnusedLocals": true, // Report errors on unused locals.
+		"strictNullChecks": true, // Enable strict null checks.
+		"allowJs": true
 	},
 	"exclude": [
 		"node_modules",
-		".vscode-test"
+		".vscode-test",
+		"out"
 	]
 }
