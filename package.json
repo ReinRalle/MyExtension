@@ -2,22 +2,28 @@
 	"name": "myextension",
 	"displayName": "My Extension",
 	"description": "test some",
-	"version": "0.0.2",
+	"version": "0.0.4",
 	"publisher": "reinralle",
+	"license": "SEE LICENSE IN 'LICENSE'",
 	"private": true,
 	"config": {
-		"test": "fff",
-		"test2": "${command:extension.setvariable}"
+		"test1": "test1",
+		"test2": "test2"
 	},
 	"custom": {
 		"test": "Hallo Du meine Welt"
 	},
 	"author": {
 		"name": "reinralle",
-		"email": "reinralle@google.de"
+		"email": "reinralle@gmail.de"
 	},
+	"homepage": "https://github.com/reinralle/myextension",
 	"repository": {
-		"url": "www.reinralle.de"
+		"type": "git",
+		"url": "https://github.com/reinralle/myextension"
+	},
+	"bugs": {
+		"url": "https://github.com/reinralle/myextension/issues"
 	},
 	"engines": {
 		"vscode": "^1.41.0"
@@ -72,13 +78,13 @@
 		"precmd-echo": "echo 1. pre",
 		"cmd-echo": "echo 2. cmd",
 		"postcmd-echo": "echo 3. post",
-		"init-weasel":"~/weasel_start.sh",
+		"init-weasel": "~/weasel_start.sh",
 		"ncu": "ncu",
 		"ncu-u": "ncu -u",
 		"npm-install": "npm install",
 		"npm-list-config-defaults": "npm config list",
 		"npm-list-installed-ll": "npm ll --depth 0",
-		"npm-list-installed-ls": "npm ls --depth 0",
+		"npm-list-installed-ls": "npm ls -g --depth 0",
 		"npm-list-outdated": "npm outdated",
 		"npm-update": "npm update",
 		"show_bash_man": "man bash",
@@ -90,10 +96,13 @@
 		"show-help-vscode": "\"/mnt/c/Program Files/Microsoft VS Code/bin/code\" --help",
 		"show-help-wsl": "wsl.exe --help",
 		"show-set": "set",
+		"show-variable-config": "echo $npm_package_config_test1",
 		"show-variable-custom": "echo $npm_package_custom_test",
 		"show-variable-env1": "echo $USER",
 		"show-variable-env2": "echo $SHLVL",
 		"show-variable-full-package-name": "echo $npm_package_name-$npm_package_version.vsix",
+		"lint": "tslint -p ./",
+		"vsce-ls": "vsce ls",
 		"vsce-package1": "vsce package",
 		"vsce-package2": "vsce package --out E:/test.vsix",
 		"vscode:prepublish": "npm run compile",
