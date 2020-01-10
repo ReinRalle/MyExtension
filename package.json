@@ -6,6 +6,7 @@
 	"publisher": "reinralle",
 	"license": "SEE LICENSE IN 'LICENSE'",
 	"private": true,
+	"icon": "images/Zahnrad.png",
 	"config": {
 		"test1": "test1",
 		"test2": "test2"
@@ -15,12 +16,12 @@
 	},
 	"author": {
 		"name": "reinralle",
-		"email": "reinralle@gmail.de"
+		"email": "reinralle@gmail.com"
 	},
 	"homepage": "https://github.com/reinralle/myextension",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/reinralle/myextension"
+		"url": "https://github.com/reinralle/myextension.git"
 	},
 	"bugs": {
 		"url": "https://github.com/reinralle/myextension/issues"
