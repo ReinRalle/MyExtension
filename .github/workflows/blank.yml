@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Run a one-line script
-        run: echo Hello, world! (13.01.20, 08:23h)
+        run:  printf "Current date and time => %s\n" "$(date +'%d.%m.%y - %H:%Mh')"
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
