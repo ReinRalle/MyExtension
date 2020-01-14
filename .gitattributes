@@ -1,6 +1,38 @@
-# TODO: solve "probs" with different line endings between linux(wsl) and windows
+# Auto detect text files and perform LF normalization
+# http://davidlaing.com/2012/09/19/customise-your-gitattributes-to-become-a-git-ninja/
 
-# Autodetect text files
-# * text=auto
-text eol=lf
+* text=auto eol=lf
 
+# These files are text and should be normalized (Convert crlf => lf)
+
+*.ini text
+*.js text
+*.ts text
+*.json text
+*.map text
+*.txt text
+*.md text
+
+# Windows
+
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# These files are binary and should be left untouched
+# (binary is a macro for -text -diff)
+
+*.exe binary
+*.png binary
+*.pdn binary
+
+# Documents
+*.doc  diff=astextplain
+*.DOC  diff=astextplain
+*.docx diff=astextplain
+*.DOCX diff=astextplain
+*.dot  diff=astextplain
+*.DOT  diff=astextplain
+*.pdf  diff=astextplain
+*.PDF  diff=astextplain
+*.rtf  diff=astextplain
+*.RTF  diff=astextplain
