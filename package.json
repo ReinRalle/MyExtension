@@ -2,7 +2,7 @@
 	"name": "myextension",
 	"displayName": "My Extension",
 	"description": "test some",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"publisher": "ReinRalle",
 	"license": "MIT",
 	"private": true,
