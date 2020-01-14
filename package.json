@@ -3,10 +3,10 @@
 	"displayName": "My Extension",
 	"description": "test some",
 	"version": "0.0.5",
-	"publisher": "reinralle",
+	"publisher": "ReinRalle",
 	"license": "MIT",
 	"private": true,
-	"icon": "images/Zahnrad.png",
+	"icon": "images/Red_Silhouette_-_Electron.png",
 	"config": {
 		"test1": "test1",
 		"test2": "test2"
@@ -15,7 +15,7 @@
 		"test": "Hallo Du meine Welt"
 	},
 	"author": {
-		"name": "reinralle",
+		"name": "ReinRalle",
 		"email": "reinralle@gmail.com"
 	},
 	"homepage": "https://github.com/reinralle/myextension",
@@ -92,6 +92,7 @@
 		"show_bash_man": "man bash",
 		"show-help-bash": "help",
 		"show-help-node": "node -h",
+		"show-help-npm": "npm help",
 		"show-help-terser": "terser -h",
 		"show-help-tslint": "tslint -h",
 		"show-help-vsce": "vsce --help",
@@ -117,7 +118,7 @@
 		"@types/vscode": "^1.41.0",
 		"glob": "^7.1.6",
 		"mocha": "^7.0.0",
-		"terser": "^4.6.2",
+		"terser": "^4.6.3",
 		"tslint": "^5.20.1",
 		"typescript": "^3.7.4",
 		"vsce": "^1.71.0",
