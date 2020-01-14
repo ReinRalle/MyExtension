@@ -1,4 +1,6 @@
 # TODO: solve "probs" with different line endings between linux(wsl) and windows
 
 # Autodetect text files
-* text=auto
+# * text=auto
+text eol=lf
+
