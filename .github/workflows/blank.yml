@@ -18,6 +18,7 @@ jobs:
       - name: Install Dependencies & build
         run: |
           npm install
+          npm ll --depth 0
           vsce package
       - name: Run a multi-line script
         run: |
