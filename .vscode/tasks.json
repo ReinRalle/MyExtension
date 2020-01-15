@@ -29,6 +29,24 @@
 			"--no-global",
 			""
 		]
+	}, {
+		"description": "select used dependencies",
+		"id": "used_dependencies",
+		"type": "pickString",
+		"options": [
+			"@types/glob",
+			"@types/mocha",
+			"@types/node",
+			"@types/vscode",
+			"eslint",
+			"glob",
+			"mocha",
+			"terser",
+			"tslint",
+			"typescript",
+			"vsce",
+			"vscode-test"
+		]
 	}],
 	"tasks": [{
 		"label": "npm --- watch",
@@ -87,6 +105,10 @@
 		"label": "npm - install package",
 		"type": "shell",
 		"command": "echo ${workspaceFolder}\\%npm_package_name%"
+	}, {
+		"label": "npm repo",
+		"type": "shell",
+		"command": "npm repo ${input:used_dependencies}"
 	}, {
 		"label": "check versions (1.node, 2.npm)",
 		"type": "shell",
