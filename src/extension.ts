@@ -16,36 +16,37 @@ export async function activate(context: vscode.ExtensionContext) {
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with registerCommand
 	// The commandId parameter must match the command field in package.json
-	const helloWorld1 = vscode.commands.registerCommand("extension.hello_world1", () => {
+	const show_all_vscode_installed_extensions =
+		vscode.commands.registerCommand("extension.show_all_vscode_installed_extensions", () => {
 
-		//	vscode.window.showInformationMessage('hallo welt!');
-		LogWrite("cmd: hello_world1");
+			//	vscode.window.showInformationMessage('hallo welt!');
+			LogWrite("cmd: show_all_vscode_installed_extensions");
 
-		vscode.env.clipboard.writeText("hallo ReinRalle");
+			// vscode.env.clipboard.writeText("hallo ReinRalle");
 
-		let dbgtxt: string = "";
+			let dbgtxt: string = "";
 
-		vscode.extensions.all.forEach(function (ext) {
-			dbgtxt = `${ext.id} ==> ${ext.extensionPath}`;
+			// loop through installed extensions
+			vscode.extensions.all.forEach(function (ext) {
+				dbgtxt = `${ext.id} ==> ${ext.extensionPath}`;
 
-			myOutputChannel.appendLine(dbgtxt);
+				myOutputChannel.appendLine(dbgtxt);
+			});
+
+			//
+			let multiworkspacefile = vscode.workspace.workspaceFile;
+			if (multiworkspacefile) {
+				vscode.workspace.openTextDocument(multiworkspacefile).then(doc => {
+					vscode.window.showTextDocument(doc);
+				});
+			}
+
 		});
 
-		let multiworkspacefile = vscode.workspace.workspaceFile;
-		if (multiworkspacefile) {
-			vscode.workspace.openTextDocument(multiworkspacefile).then(doc => {
-				vscode.window.showTextDocument(doc);
-			});
-		}
+	const show_all_vscode_commands = vscode.commands.registerCommand("extension.show_all_vscode_commands", () => {
+		LogWrite("cmd: show_all_vscode_commands");
 
-	});
-
-	vscode.commands.executeCommand("");
-
-	const helloWorld2 = vscode.commands.registerCommand("extension.hello_world2", () => {
-		LogWrite("cmd: hello_world2");
-
-		getallcmds();
+		showallcmds();
 
 		// For debugging purposes
 		//scode.commands.getCommands().then((commands) => {
@@ -58,8 +59,8 @@ export async function activate(context: vscode.ExtensionContext) {
 
 	});
 
-	const helloWorld3 = vscode.commands.registerCommand("extension.hello_world3", () => {
-		LogWrite("cmd: hello_world3");
+	const test_generator = vscode.commands.registerCommand("extension.test_generator", () => {
+		LogWrite("cmd: test_generator");
 
 		const simpleGenerator = function* () {
 			yield 5;
@@ -97,20 +98,14 @@ export async function activate(context: vscode.ExtensionContext) {
 		LogWrite("cmd: openurl");
 	});
 
-	const setvariable = vscode.commands.registerCommand("extension.setvariable", () => {
 
-		return "Hallo welt, du meine";
-
-	});
-
-	context.subscriptions.push(helloWorld1);
-	context.subscriptions.push(helloWorld2);
-	context.subscriptions.push(helloWorld3);
+	context.subscriptions.push(show_all_vscode_installed_extensions);
+	context.subscriptions.push(show_all_vscode_commands);
+	context.subscriptions.push(test_generator);
 	context.subscriptions.push(getcommands);
 	context.subscriptions.push(openurl);
-	context.subscriptions.push(setvariable);
 
-	async function getallcmds() {
+	async function showallcmds() {
 
 		var cmd = await vscode.commands.getCommands();
 

@@ -42,33 +42,28 @@
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [{
-				"command": "extension.hello_world1",
-				"title": "Hello World 1",
+				"command": "extension.show_all_vscode_installed_extensions",
+				"title": "show all vscode installed extensions (output channel)",
 				"category": "myextension"
 			},
 			{
-				"command": "extension.hello_world2",
-				"title": "Hello World 2",
+				"command": "extension.show_all_vscode_commands",
+				"title": "show all vscode commands (output channel)",
 				"category": "myextension"
 			},
 			{
-				"command": "extension.hello_world3",
-				"title": "Hello World 3",
+				"command": "extension.test_generator",
+				"title": "test generator (dbg console)",
 				"category": "myextension"
 			},
 			{
 				"command": "extension.getcommands",
-				"title": "get commands",
+				"title": "get commands (dbg console)",
 				"category": "myextension"
 			},
 			{
 				"command": "extension.openurl",
-				"title": "open url",
-				"category": "myextension"
-			},
-			{
-				"command": "extension.setvariable",
-				"title": "setvariable",
+				"title": "open url (www.google.com)",
 				"category": "myextension"
 			}
 		]
