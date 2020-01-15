@@ -15,8 +15,10 @@ jobs:
           node-version: "12.x"
       - name: print Date & Time
         run: printf "Current date and time => %s\n" "$(date +'%d.%m.%y - %H:%Mh')"
-      - name: Install Dependencies
-        run: npm install
+      - name: Install Dependencies & build
+        run: |
+          npm install
+          vsce package
       - name: Run a multi-line script
         run: |
           echo "git status =>"
@@ -27,5 +29,4 @@ jobs:
           echo
           echo "ls -la =>"
           ls -la
-      - name: build package (VSIX)
-        run: vsce package
+
