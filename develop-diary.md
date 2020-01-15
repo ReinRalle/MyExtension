@@ -30,3 +30,14 @@
 * activate github's `action` in repo
 
   * [github actions](https://help.github.com/en/actions)
+
+## 15.01.20
+
+* TODO: "tasks.json" unter wsl wird vom "task explorer" noch nicht unterstützt
+	* warten auf update der extension "spmeesseman.vscode-taskexplorer"
+	* infolge dessen kann ich die tasks nur unzureichend unter wsl testen
+	* erhalte im Moment folgende Fehlermeldung:
+		* `command 'extension.commandvariable.file.fileDirnamePosix' not found`
+		* deutet auf ein anderes Prob hin
+	* könnte es mal unter einer reinen windows Umgebung testen (ohne wsl Nutzung)
+	* solved: `"MyVar6": "${command:extension.commandvariable.file.fileDirnamePosix}"` in tasks.json produzierte den Fehler - Lösung: erstmal auskommentieren

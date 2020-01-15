@@ -8,8 +8,8 @@
 			"MyVar2": "%npm_package_name%",
 			"MyVar3": "%LANG%",
 			"MyVar4": "echo $(node -p \"require('./package.json').name\")",
-			"MyVar5": "${command:extension.pickNodeProcess}",
-			"MyVar6": "${command:extension.commandvariable.file.fileDirnamePosix}"
+			"MyVar5": "${command:extension.pickNodeProcess}"
+			// "MyVar6": "${command:extension.commandvariable.file.fileDirnamePosix}"
 		}
 	},
 	"presentation": {
