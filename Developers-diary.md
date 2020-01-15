@@ -33,7 +33,7 @@
 
 ## 15.01.20
 
-* TODO: "tasks.json" unter wsl wird vom "task explorer" noch nicht unterstützt
+* ~~TODO~~: "tasks.json" unter wsl wird vom "task explorer" noch nicht unterstützt
 	* warten auf update der extension "spmeesseman.vscode-taskexplorer"
 	* infolge dessen kann ich die tasks nur unzureichend unter wsl testen
 	* erhalte im Moment folgende Fehlermeldung:
@@ -41,3 +41,16 @@
 		* deutet auf ein anderes Prob hin
 	* könnte es mal unter einer reinen windows Umgebung testen (ohne wsl Nutzung)
 	* solved: `"MyVar6": "${command:extension.commandvariable.file.fileDirnamePosix}"` in tasks.json produzierte den Fehler - Lösung: erstmal auskommentieren
+
+* `github action`: kann nicht verstehen, was das Pipe Symbol bei `run: |` soll!
+	* Erklärung unter: [github-actions](https://dev.to/bnb/an-unintentionally-comprehensive-introduction-to-github-actions-ci-blm)
+	* hat mit yaml syntax zu tun
+	* [Learn YAML in five minutes!](https://www.codeproject.com/Articles/1214409/Learn-YAML-in-five-minutes)
+
+* git: show all config properties in different files:
+
+  `git --no-pager config --list --show-origin`
+
+* markdown
+	* Strikethrough uses two tildes
+	* [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
