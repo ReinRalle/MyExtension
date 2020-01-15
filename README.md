@@ -20,7 +20,7 @@ Mache es mal kurz in deutsch:
 * ansonsten hat die Extension keinen besonderen Zweck
 * Die Nutzung sollte nur zu Lernzwecken erfolgen (natürlich auf eigene Gefahr).
 
-Sollte jemand seinen **Senf** dazugeben wollen/müssen, kann er das sehr gerne tun. (wenn es konstruktiv gemeint ist - sowieso)
+Sollte jemand etwas zu kommentieren/kritisieren haben, kann er das hier sehr gerne tun.
 
 ## `Entwicklung`:
 
