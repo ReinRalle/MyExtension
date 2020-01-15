@@ -6,7 +6,7 @@
 	"publisher": "ReinRalle",
 	"license": "MIT",
 	"private": true,
-	"icon": "images/Red_Silhouette_-_Electron.png",
+	"icon": "images/Electron.png",
 	"keywords": [
 		"vscode-extension",
 		"example"
