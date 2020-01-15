@@ -33,8 +33,10 @@ Sollte jemand etwas zu kommentieren/kritisieren haben, kann er das hier sehr ger
     * [npm](https://www.npmjs.com/)
     * [vscode-generator-code](https://github.com/microsoft/vscode-generator-code)
     * [vscode-vsce](https://github.com/microsoft/vscode-vsce)
+    * [colors](https://www.npmjs.com/package/colors)
 
-* cloning: `git clone git@github.com:ReinRalle/`
+* cloning repo: `git clone git@github.com:ReinRalle/`
 * Abhängigkeiten installieren: `npm install`
 * VsCode im aktuellen Verzeichnis starten: `code .`
 * Extension 'paketisieren' (VSIX): `vsce package`
+* Extension publizieren auf [MarketPlace](marketplace.visualstudio.com): `vsce publish`
