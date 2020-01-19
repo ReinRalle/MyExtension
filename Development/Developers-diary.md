@@ -2,7 +2,6 @@
 
 ## 11.01.20
 
-
 * `git`
 
   * <details>
@@ -183,52 +182,52 @@
 
   * Problem: `nvm` lässt sich weder von einem shell script noch von einem `package.json` script nutzen.
 
-  * Info: `nvm` ist eine `builin function` von bash
+    * Info: `nvm` ist eine `builin function` von bash
 
-  * Fix: add `. ~/.nvm/nvm.sh`
+    * Fix: add `. ~/.nvm/nvm.sh`
 
-    <details>
-    <summary>shell script </summary>
+      <details>
+      <summary>shell script </summary>
 
-    ```bash
-    #!/bin/bash
+        ```bash
+        #!/bin/bash
 
-    # /Development/test_nvm.sh
+        # /Development/test_nvm.sh
 
-    clear; echo
+        clear; echo
 
-    . ~/.nvm/nvm.sh # sorce ~/.nvm/nvm.sh
+        . ~/.nvm/nvm.sh # sorce ~/.nvm/nvm.sh
 
-    # printf "%s\n\n" "$(bash -c "help")"
-    # printf "%s\n\n" "$(bash "--help")"
-    # printf "%s\n\n" "$(bash -c "help set")"
-    # printf "%s\n\n" "$(nvm --help)"
-    # printf "%s\n\n" "$(nvm --version)"
-    # printf "%s\n\n" "$(nvm debug)"
-    # printf "%s\n\n" "$(nvm ls)"
-      printf "%s\n\n" "$(nvm exec v12.14.0 node --version)"
-    # printf "%s\n\n" "$(nvm exec v12.14.0 node --help)"
-    # printf "%s\n\n" "$(nvm exec v12.14.0 node   --v8-options)"
+        # printf "%s\n\n" "$(bash -c "help")"
+        # printf "%s\n\n" "$(bash "--help")"
+        # printf "%s\n\n" "$(bash -c "help set")"
+        # printf "%s\n\n" "$(nvm --help)"
+        # printf "%s\n\n" "$(nvm --version)"
+        # printf "%s\n\n" "$(nvm debug)"
+        # printf "%s\n\n" "$(nvm ls)"
+          printf "%s\n\n" "$(nvm exec v12.14.0 node --version)"
+        # printf "%s\n\n" "$(nvm exec v12.14.0 node --help)"
+        # printf "%s\n\n" "$(nvm exec v12.14.0 node   --v8-options)"
 
-    # node --version
-    ```
-    </details>
+        # node --version
+        ```
+      </details>
 
-    <details>
-    <summary>package.json</summary>
+      <details>
+        <summary>package.json</summary>
 
-    ```json
-    ..
+        ```json
+        ..
 
-    "scripts": {
-      ..
-      "nvm-ls": "${. ~/.nvm/nvm.sh && nvm ls}"
-      ..
-    }
+        "scripts": {
+          ..
+          "nvm-ls": "${. ~/.nvm/nvm.sh && nvm ls}"
+          ..
+        }
 
-    ..
-    ```
-    </details>
+        ..
+        ```
+      </details>
 
 ## 19.01.20
 
@@ -261,3 +260,5 @@
   * Info: interaktiver Inhalt
     * Info: [mozilla: \<details\>\</details\>, \<summery\>\</summery\>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details)
     * Info: [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
+
+  * Info: [Complete list of github markdown emoji markup ](https://gist.github.com/rxaviers/7360908)
