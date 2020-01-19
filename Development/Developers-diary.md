@@ -34,14 +34,14 @@
 
 * `github actions`
 
-  * **Info**: [github actions](https://help.github.com/en/actions)
-  * **Info**: [Working with GitHub Actions](https://jeffrafter.com/working-with-github-actions/)
+  * Info: [github actions](https://help.github.com/en/actions)
+  * Info: [Working with GitHub Actions](https://jeffrafter.com/working-with-github-actions/)
 
-  * **change**: activate github's `action` in repo
+  * change: activate github's `action` in repo
 
 ## 15.01.20
 
-* ~~**TODO**~~: "tasks.json" unter wsl wird vom "task explorer" noch nicht unterstützt
+* ~~TODO~~: "tasks.json" unter wsl wird vom "task explorer" noch nicht unterstützt
 	* warten auf update der extension "spmeesseman.vscode-taskexplorer"
 	* infolge dessen kann ich die tasks nur unzureichend unter wsl testen
 	* erhalte im Moment folgende Fehlermeldung:
@@ -53,36 +53,36 @@
 
 * `github action`
 
-  * **Problem**: kann nicht verstehen, was das Pipe Symbol bei `run: |` soll!
+  * Problem: kann nicht verstehen, was das Pipe Symbol bei `run: |` soll!
 	* Erklärung unter: [github-actions](https://dev.to/bnb/an-unintentionally-comprehensive-introduction-to-github-actions-ci-blm)
 	* hat mit yaml syntax zu tun
-	* **Info**: [Learn YAML in five minutes!](https://www.codeproject.com/Articles/1214409/Learn-YAML-in-five-minutes)
+	* Info: [Learn YAML in five minutes!](https://www.codeproject.com/Articles/1214409/Learn-YAML-in-five-minutes)
 
 * `git`
-  * **Info**: show all config properties in different files:
+  * Info: show all config properties in different files:
 
     `git --no-pager config --list --show-origin`
 
 * `markdown`
-	* **Info**: Strikethrough uses two tildes
-	* **Info**: [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+	* Info: Strikethrough uses two tildes
+	* Info: [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 ## 16.01.20
 
 * `node.js`
-  * **Info**: [Why and How to Migrate from NPM to Yarn](https://waverleysoftware.com/blog/yarn-vs-npm/)
+  * Info: [Why and How to Migrate from NPM to Yarn](https://waverleysoftware.com/blog/yarn-vs-npm/)
 
 * `github-actions`
-  * **Info**: [GitHub Marketplace](https://github.com/marketplace?type=actions)
+  * Info: [GitHub Marketplace](https://github.com/marketplace?type=actions)
 
-  * **Info**: [actions/create-release](https://github.com/actions/create-release)
-  * **Info**: [Manual workflow triggers in Github Actions](https://stackoverflow.com/questions/58933155/manual-workflow-triggers-in-github-actions/59621799#59621799)
+  * Info: [actions/create-release](https://github.com/actions/create-release)
+  * Info: [Manual workflow triggers in Github Actions](https://stackoverflow.com/questions/58933155/manual-workflow-triggers-in-github-actions/59621799#59621799)
 
-  * **Info**: [Automating the build and publish process with GitHub Actions (and GitHub Package Registry)](https://stackoverflow.com/questions/58347746/automating-the-build-and-publish-process-with-github-actions-and-github-package)
+  * Info: [Automating the build and publish process with GitHub Actions (and GitHub Package Registry)](https://stackoverflow.com/questions/58347746/automating-the-build-and-publish-process-with-github-actions-and-github-package)
 
-  * **Info**: [commit changes made in your **`workflow run`** directly to your repo](https://github.com/EndBug/add-and-commit)
+  * Info: [commit changes made in your **`workflow run`** directly to your repo](https://github.com/EndBug/add-and-commit)
 
-  * **Info**: [GitHub Action to automate deploying VS Code extensions](https://github.com/lannonbr/vsce-action)
+  * Info: [GitHub Action to automate deploying VS Code extensions](https://github.com/lannonbr/vsce-action)
 
   * <details>
     <summary>Examples</summary>
@@ -118,13 +118,13 @@
     </details>
 * `github-api`
 
-  * **Info**: [GitHub REST API v3](https://developer.github.com/v3/)
+  * Info: [GitHub REST API v3](https://developer.github.com/v3/)
 
-  * **Info**: [Accessing GitHub's REST API with CURL](https://blogs.infosupport.com/accessing-githubs-rest-api-with-curl/)
+  * Info: [Accessing GitHub's REST API with CURL](https://blogs.infosupport.com/accessing-githubs-rest-api-with-curl/)
 
-  * **Info**: [GitHub Rest Api Example and Uses](https://www.restapiexample.com/use-of-rest-api/github-rest-api-example-uses/)
+  * Info: [GitHub Rest Api Example and Uses](https://www.restapiexample.com/use-of-rest-api/github-rest-api-example-uses/)
 
-  * **Info**: [Integrating REST APIs into CI/CD pipelines](https://circleci.com/blog/cicd-rest-apis/)
+  * Info: [Integrating REST APIs into CI/CD pipelines](https://circleci.com/blog/cicd-rest-apis/)
 
   * <details>
 
@@ -155,13 +155,13 @@
 
 * `WSL - bash`
 
-  * **~~Problem~~**: mein `weasel` script (`~/weaser_start.sh`) scheint nicht ausgeführt zu werden.
+  * ~~Problem~~: mein `weasel` script (`~/weaser_start.sh`) scheint nicht ausgeführt zu werden.
 
-  * **Ursache**: bash .profile file`~/.profile` wird nicht aufgerufen, wenn unter vscode ein neues Terminal unter "remote wsl" geöffnet wird.
+  * Ursache: bash .profile file`~/.profile` wird nicht aufgerufen, wenn unter vscode ein neues Terminal unter "remote wsl" geöffnet wird.
 
-  * **Fix**: hinzufügen folgender Zeile in den:
-    *  ~~**Change**: "workspace settings" (`.vscode/settings.json`)~~
-    * **Change**: "user settings" (`/C:/Users/:USER/AppData/Roaming/Code/User/settings.json`) (windows):
+  * Fix: hinzufügen folgender Zeile in den:
+    *  ~~Change: "workspace settings" (`.vscode/settings.json`)~~
+    * Change: "user settings" (`/C:/Users/:USER/AppData/Roaming/Code/User/settings.json`) (windows):
 
       ```json
       "terminal.integrated.shellArgs.linux": ["-l"]
@@ -171,7 +171,7 @@
       Anotation (2): argument `-l` => login shell (run `~/.profile`)
 
 * `node.js`
-  * **Change**: um mögliche Überchneidungen auszuschliessen, versuche ich mal, `node.js` komplett (windows & wsl) zu deinstallieren. Im nächsten Schritt installiere ich `node.js` mithilfe von [nvm](https://github.com/nvm-sh/nvm/blob/master/README.md) unter `Remote - WSL`:
+  * Change: um mögliche Überchneidungen auszuschliessen, versuche ich mal, `node.js` komplett (windows & wsl) zu deinstallieren. Im nächsten Schritt installiere ich `node.js` mithilfe von [nvm](https://github.com/nvm-sh/nvm/blob/master/README.md) unter `Remote - WSL`:
 
     ```bash
     # install nvm
@@ -181,11 +181,11 @@
 
 * `node.js`
 
-  * **Problem**: `nvm` lässt sich weder von einem shell script noch von einem `package.json` script nutzen.
+  * Problem: `nvm` lässt sich weder von einem shell script noch von einem `package.json` script nutzen.
 
-  * **Info**: `nvm` ist eine `builin function` von bash
+  * Info: `nvm` ist eine `builin function` von bash
 
-  * **Fix**: add `. ~/.nvm/nvm.sh`
+  * Fix: add `. ~/.nvm/nvm.sh`
 
     <details>
     <summary>shell script </summary>
@@ -234,7 +234,7 @@
 
 * `node.js`
 
-  * **Info**: listet alle global installierten Packages
+  * Info: listet alle global installierten Packages
 
     ```
     > npm ls -g --depth 0
@@ -244,10 +244,10 @@
     ├── npm-check@5.9.0
     └── npm-check-updates@4.0.1
     ```
-  * **Problem**: alle Scripts im `package.json` file funktionieren nicht mehr!
+  * Problem: alle Scripts im `package.json` file funktionieren nicht mehr!
     * Error: `N/A: version "N/A -> N/A" is not yet installed`
-    * **Ursache**: hab mit `nvn` 'rumgespielt'
-    * **Fix**:
+    * Ursache: hab mit `nvn` 'rumgespielt'
+    * Fix:
 
       ```bash
       # Eingabe im WSL Terminal
@@ -258,6 +258,6 @@
       ```
 * `Markdown`
 
-  * **Info**: interaktiver Inhalt
-    * **Info**: [mozilla: \<details\>\</details\>, \<summery\>\</summery\>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details)
-    * **Info**: [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
+  * Info: interaktiver Inhalt
+    * Info: [mozilla: \<details\>\</details\>, \<summery\>\</summery\>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details)
+    * Info: [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
