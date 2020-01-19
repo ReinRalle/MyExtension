@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: use actions/checkout@v1
+      - name: Checkout repository
         uses: actions/checkout@v1
       - name: Setup Node
         uses: actions/setup-node@v1
@@ -19,7 +19,7 @@ jobs:
         run: |
           npm install
           npm ll --depth 0
-          npm run vsce-package1 
+          npm run vsce-package
       - name: Run a multi-line script
         run: |
           echo "git status =>"
