@@ -17,6 +17,9 @@ jobs:
         run: npm install
       - name: build
         run: npm run vsce-package1
+      - name: add to git
+        run: git commit -a -m "add *.vsix, lock file?"
+
       - name: Run multiple commands
         run: |
           printf "Current date and time => %s\n" "$(date +'%d.%m.%y - %H:%Mh')"
