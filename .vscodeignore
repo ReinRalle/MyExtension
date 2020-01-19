@@ -2,9 +2,6 @@
 
 CODE_OF_CONDUCT.md
 CONTRIBUTING.md
-Developers-diary.md
-Tools.md
-vsc-extension-quickstart.md
 images/Electron.pdn
 
 **/*.map
@@ -15,5 +12,6 @@ images/Electron.pdn
 .github/**
 .vscode/**
 .vscode-test/**
+Development/**
 out/test/**
 src/**
