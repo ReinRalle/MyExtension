@@ -12,6 +12,7 @@
     "javascript.referencesCodeLens.enabled": true,
     "javascript.referencesCodeLens.showOnAllFunctions": true,
     "code-runner.saveFileBeforeRun": true,
+    "code-runner.runInTerminal": true,
     "javascript.implicitProjectConfig.checkJs": true,
     "eslint.alwaysShowStatus": true,
     "eslint.codeAction.showDocumentation": {
