@@ -2,125 +2,142 @@
 
 ## 11.01.20
 
-* change `.git/config` <details>
-  <summary>.git/config</summary>
 
-   ```yaml
-   # vscode: select language format: Properties
+* `git`
 
-   [core]
-     repositoryformatversion = 0
-     filemode = true
-     bare = false
-     logallrefupdates = true
-     ignorecase = true
+  * <details>
+    <summary>change .git/config</summary>
 
-   [remote "origin"]
-     url = git@github.com:ReinRalle/MyExtension.git
-     fetch = +refs/heads/*:refs/remotes/origin/*
+     ```yaml
+     # vscode: select language format:   Properties
 
-   [remote "github"] # add for testing 11.01.20, 12:30h
-     url = git@github.com:ReinRalle/MyExtension
-     fetch = refs/heads/*:refs/remotes/github/*
+     [core]
+       repositoryformatversion = 0
+       filemode = true
+       bare = false
+       logallrefupdates = true
+       ignorecase = true
 
-   [branch "master"] # add for testing 11.01.20, 12:30h
-      remote = origin
-      merge = refs/heads/master
-  ```
-  </details>
+     [remote "origin"]
+       url = git@github.com:ReinRalle/  MyExtension.git
+       fetch = +refs/heads/*:refs/remotes/  origin/*
 
-* activate github's `action` in repo
+     [remote "github"] # add for testing   11.01.20, 12:30h
+       url = git@github.com:ReinRalle/  MyExtension
+       fetch = refs/heads/*:refs/remotes/github/  *
 
-  [github actions](https://help.github.com/en/actions)
+     [branch "master"] # add for testing   11.01.20, 12:30h
+        remote = origin
+        merge = refs/heads/master
+    ```
+    </details>
+
+* `github actions`
+
+  * **Info**: [github actions](https://help.github.com/en/actions)
+  * **Info**: [Working with GitHub Actions](https://jeffrafter.com/working-with-github-actions/)
+
+  * **change**: activate github's `action` in repo
 
 ## 15.01.20
 
-* ~~TODO~~: "tasks.json" unter wsl wird vom "task explorer" noch nicht unterstützt
+* ~~**TODO**~~: "tasks.json" unter wsl wird vom "task explorer" noch nicht unterstützt
 	* warten auf update der extension "spmeesseman.vscode-taskexplorer"
 	* infolge dessen kann ich die tasks nur unzureichend unter wsl testen
 	* erhalte im Moment folgende Fehlermeldung:
 		* `command 'extension.commandvariable.file.fileDirnamePosix' not found`
 		* deutet auf ein anderes Prob hin
 	* könnte es mal unter einer reinen windows Umgebung testen (ohne wsl Nutzung)
-	* solved: `"MyVar6": "${command:extension.commandvariable.file.fileDirnamePosix}"` in tasks.json produzierte den Fehler - Lösung: erstmal auskommentieren
+	* Ursache: `"MyVar6": "${command:extension.commandvariable.file.fileDirnamePosix}"` in tasks.json produziert den Fehler
+  * Fix: erstmal auskommentieren
 
-* `github action`: kann nicht verstehen, was das Pipe Symbol bei `run: |` soll!
+* `github action`
+
+  * **Problem**: kann nicht verstehen, was das Pipe Symbol bei `run: |` soll!
 	* Erklärung unter: [github-actions](https://dev.to/bnb/an-unintentionally-comprehensive-introduction-to-github-actions-ci-blm)
 	* hat mit yaml syntax zu tun
-	* [Learn YAML in five minutes!](https://www.codeproject.com/Articles/1214409/Learn-YAML-in-five-minutes)
+	* **Info**: [Learn YAML in five minutes!](https://www.codeproject.com/Articles/1214409/Learn-YAML-in-five-minutes)
 
-* git: show all config properties in different files:
+* `git`
+  * **Info**: show all config properties in different files:
 
-  `git --no-pager config --list --show-origin`
+    `git --no-pager config --list --show-origin`
 
-* markdown
-	* Strikethrough uses two tildes
-	* [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-
-* GitHub Actions: [Working with GitHub Actions](https://jeffrafter.com/working-with-github-actions/)
+* `markdown`
+	* **Info**: Strikethrough uses two tildes
+	* **Info**: [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 ## 16.01.20
 
-* **node.js:** [Why and How to Migrate from NPM to Yarn](https://waverleysoftware.com/blog/yarn-vs-npm/)
+* `node.js`
+  * **Info**: [Why and How to Migrate from NPM to Yarn](https://waverleysoftware.com/blog/yarn-vs-npm/)
 
-* **github-actions:**
-  * [GitHub Marketplace](https://github.com/marketplace?type=actions)
+* `github-actions`
+  * **Info**: [GitHub Marketplace](https://github.com/marketplace?type=actions)
 
-  * [actions/create-release](https://github.com/actions/create-release)
-  * [Manual workflow triggers in Github Actions](https://stackoverflow.com/questions/58933155/manual-workflow-triggers-in-github-actions/59621799#59621799)
+  * **Info**: [actions/create-release](https://github.com/actions/create-release)
+  * **Info**: [Manual workflow triggers in Github Actions](https://stackoverflow.com/questions/58933155/manual-workflow-triggers-in-github-actions/59621799#59621799)
+
+  * **Info**: [Automating the build and publish process with GitHub Actions (and GitHub Package Registry)](https://stackoverflow.com/questions/58347746/automating-the-build-and-publish-process-with-github-actions-and-github-package)
+
+  * **Info**: [commit changes made in your **`workflow run`** directly to your repo](https://github.com/EndBug/add-and-commit)
+
+  * **Info**: [GitHub Action to automate deploying VS Code extensions](https://github.com/lannonbr/vsce-action)
 
   * <details>
-    <summary>Action Example</summary>
+    <summary>Examples</summary>
 
-    ```yaml
-      name: Test
+    * Example:
+      ```yaml
+        name: Test
 
-      on:
-        watch
-          types: [started]
+        on:
+          watch
+            types: [started]
 
-      jobs:
-        build:
-          runs-on: ubuntu-latest
+        jobs:
+          build:
+            runs-on: ubuntu-latest
 
-          if: github.actor ==   github.event.repository.owner.login
+            if: github.actor ==     github.event.repository.owner.login
 
-          steps:
-             - name: Checkout repository
-               uses: actions/checkout@v2
-               # add more ...
-      ```
+            steps:
+               - name: Checkout repository
+                 uses: actions/checkout@v2
+                 # add more ...
+        ```
+
+    * example GitHub Projects:
+
+      * [vscode-objectscript](https://github.com/daimor/vscode-objectscript/actions)
+
+      * [content-navigator](https://github.com/ggbecker/content-navigator/actions)
+
+      * [vs_plugin_search_for_errors_on_stackoverflow](https://github.com/kinoooshnik/vs_plugin_search_for_errors_on_stackoverflow/actions)
+
     </details>
+* `github-api`
 
-  * [Automating the build and publish process with GitHub Actions (and GitHub Package Registry)](https://stackoverflow.com/questions/58347746/automating-the-build-and-publish-process-with-github-actions-and-github-package)
+  * **Info**: [GitHub REST API v3](https://developer.github.com/v3/)
 
-  * [commit changes made in your **`workflow run`** directly to your repo](https://github.com/EndBug/add-and-commit)
+  * **Info**: [Accessing GitHub's REST API with CURL](https://blogs.infosupport.com/accessing-githubs-rest-api-with-curl/)
 
-  * [GitHub Action to automate deploying VS Code extensions](https://github.com/lannonbr/vsce-action)
+  * **Info**: [GitHub Rest Api Example and Uses](https://www.restapiexample.com/use-of-rest-api/github-rest-api-example-uses/)
 
-  * **Examples:**
-    * github-actions: [vscode-extension-example 1](https://github.com/daimor/vscode-objectscript/actions)
-
-    * github-actions: [vscode-extension-example 2](https://github.com/ggbecker/content-navigator/actions)
-
-    * github-actions: [vscode-extension-example 3](https://github.com/kinoooshnik/vs_plugin_search_for_errors_on_stackoverflow/actions)
-
-* **github-api:** [GitHub REST API v3](https://developer.github.com/v3/)
-
-  * [Accessing GitHub's REST API with CURL](https://blogs.infosupport.com/accessing-githubs-rest-api-with-curl/)
-
-  * example:
-
-    in this example, the 'vmg' and 'redcarpet' values are provided for the :owner and :repo parameters in the path while :state is passed in the query string.
-
-    ```bash
-    # curl -i "https://api.github.com/repos/:owner/:repo/issues?state=:state"
-	  curl -i "https://api.github.com/repos/vmg/redcarpet/issues?state=closed"
-    ```
+  * **Info**: [Integrating REST APIs into CI/CD pipelines](https://circleci.com/blog/cicd-rest-apis/)
 
   * <details>
 
     <summary>curl examples</summary>
+
+      in this example, the 'vmg' and 'redcarpet' values are provided for the :owner and :repo parameters in the path while :state is passed in the query string.
+
+      ```bash
+      # curl -i "https://api.github.com/repos/:owner/:repo/issues?state=:state"
+	    curl -i "https://api.github.com/repos/vmg/redcarpet/issues?state=closed"
+      ```
+
+      noch ein paar andere Beispiele:
 
       ```bash
 	    curl    https://api.github.com #
@@ -134,10 +151,6 @@
 	  ```
     </details>
 
-  * [GitHub Rest Api Example and Uses](https://www.restapiexample.com/use-of-rest-api/github-rest-api-example-uses/)
-  * [Integrating REST APIs into CI/CD pipelines](https://circleci.com/blog/cicd-rest-apis/)
-
-
 ## 17.01.20
 
 * `WSL - bash`
@@ -146,21 +159,19 @@
 
   * **Ursache**: bash .profile file`~/.profile` wird nicht aufgerufen, wenn unter vscode ein neues Terminal unter "remote wsl" geöffnet wird.
 
-  * **Lösung**: hinzufügen folgender Zeile in den:
-    *  ~~"workspace settings" (`.vscode/settings.json`)~~
-    * "user settings" (`/C:/Users/:USER/AppData/Roaming/Code/User/settings.json`) (windows):
+  * **Fix**: hinzufügen folgender Zeile in den:
+    *  ~~**Change**: "workspace settings" (`.vscode/settings.json`)~~
+    * **Change**: "user settings" (`/C:/Users/:USER/AppData/Roaming/Code/User/settings.json`) (windows):
 
-    ```json
-    "terminal.integrated.shellArgs.linux": ["-l"]
-    ```
-    Anotation (1): [can only be defined in user settings](https://code.visualstudio.com/docs/editor/integrated-terminal#_configuration)
+      ```json
+      "terminal.integrated.shellArgs.linux": ["-l"]
+      ```
+      Anotation (1): [can only be defined in user settings](https://code.visualstudio.com/docs/editor/integrated-terminal#_configuration)
 
-    Anotation (2): argument `-l` => login shell (run `~/.profile`)
+      Anotation (2): argument `-l` => login shell (run `~/.profile`)
 
 * `node.js`
-  * um mögliche Überchneidungen auszuschliessen, versuche ich mal, `node.js` komplett (windows & wsl) zu deinstallieren.
-
-  * im nächsten Schritt installiere ich `node.js` mithilfe von [nvm](https://github.com/nvm-sh/nvm/blob/master/README.md) unter `Remote - WSL`:
+  * **Change**: um mögliche Überchneidungen auszuschliessen, versuche ich mal, `node.js` komplett (windows & wsl) zu deinstallieren. Im nächsten Schritt installiere ich `node.js` mithilfe von [nvm](https://github.com/nvm-sh/nvm/blob/master/README.md) unter `Remote - WSL`:
 
     ```bash
     # install nvm
@@ -168,50 +179,85 @@
     ```
 ## 18.01.20
 
-`node.js`
+* `node.js`
 
-* **Problem**: `nvm` lässt sich weder von einem shell script noch von einem `package.json` script nutzen.
+  * **Problem**: `nvm` lässt sich weder von einem shell script noch von einem `package.json` script nutzen.
 
-* **Info**: `nvm` ist eine `builin function` von bash
+  * **Info**: `nvm` ist eine `builin function` von bash
 
-* **Lösung**:
+  * **Fix**: add `. ~/.nvm/nvm.sh`
 
-  <details>
-  <summary>shell script: /Development/test_nvm.sh</summary>
+    <details>
+    <summary>shell script </summary>
 
-  ```bash
-  #!/bin/bash
+    ```bash
+    #!/bin/bash
 
-  clear; echo
+    # /Development/test_nvm.sh
 
-  . ~/.nvm/nvm.sh # sorce ~/.nvm/nvm.sh
+    clear; echo
 
-  # printf "%s\n\n" "$(bash -c "help")"
-  # printf "%s\n\n" "$(bash "--help")"
-  # printf "%s\n\n" "$(bash -c "help set")"
-  # printf "%s\n\n" "$(nvm --help)"
-  # printf "%s\n\n" "$(nvm --version)"
-  # printf "%s\n\n" "$(nvm debug)"
-  # printf "%s\n\n" "$(nvm ls)"
-    printf "%s\n\n" "$(nvm exec v12.14.0 node --version)"
-  # printf "%s\n\n" "$(nvm exec v12.14.0 node --help)"
-  # printf "%s\n\n" "$(nvm exec v12.14.0 node --v8-options)"
+    . ~/.nvm/nvm.sh # sorce ~/.nvm/nvm.sh
 
-  # node --version
-  ```
-  </details>
+    # printf "%s\n\n" "$(bash -c "help")"
+    # printf "%s\n\n" "$(bash "--help")"
+    # printf "%s\n\n" "$(bash -c "help set")"
+    # printf "%s\n\n" "$(nvm --help)"
+    # printf "%s\n\n" "$(nvm --version)"
+    # printf "%s\n\n" "$(nvm debug)"
+    # printf "%s\n\n" "$(nvm ls)"
+      printf "%s\n\n" "$(nvm exec v12.14.0 node --version)"
+    # printf "%s\n\n" "$(nvm exec v12.14.0 node --help)"
+    # printf "%s\n\n" "$(nvm exec v12.14.0 node   --v8-options)"
 
-  `package.json`:
+    # node --version
+    ```
+    </details>
 
-  ```json
-  ..
+    <details>
+    <summary>package.json</summary>
 
-  "scripts": {
-    "nvm-ls": "${. ~/.nvm/nvm.sh && nvm ls}"
-  }
+    ```json
+    ..
 
-  ..
-  ```
+    "scripts": {
+      ..
+      "nvm-ls": "${. ~/.nvm/nvm.sh && nvm ls}"
+      ..
+    }
+
+    ..
+    ```
+    </details>
 
 ## 19.01.20
 
+* `node.js`
+
+  * **Info**: listet alle global installierten Packages
+
+    ```
+    > npm ls -g --depth 0
+
+    /home/reinralle/.nvm/versions/node/    v12.14.0/lib
+    ├── npm@6.13.6
+    ├── npm-check@5.9.0
+    └── npm-check-updates@4.0.1
+    ```
+  * **Problem**: alle Scripts im `package.json` file funktionieren nicht mehr!
+    * Error: `N/A: version "N/A -> N/A" is not yet installed`
+    * **Ursache**: hab mit `nvn` 'rumgespielt'
+    * **Fix**:
+
+      ```bash
+      # Eingabe im WSL Terminal
+
+      # points "default" at the latest installed Node version
+
+      nvm alias default node
+      ```
+* `Markdown`
+
+  * **Info**: interaktiver Inhalt
+    * **Info**: [mozilla: \<details\>\</details\>, \<summery\>\</summery\>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details)
+    * **Info**: [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
