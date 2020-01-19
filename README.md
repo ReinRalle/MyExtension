@@ -40,3 +40,7 @@ Sollte jemand etwas zu kommentieren/kritisieren haben, kann er das hier sehr ger
 * VsCode im aktuellen Verzeichnis starten: `code .`
 * Extension 'paketisieren' (VSIX): `vsce package`
 * Extension publizieren auf [MarketPlace](marketplace.visualstudio.com): `vsce publish`
+
+## License
+
+MIT
