@@ -18,6 +18,9 @@ jobs:
         run: npm install
 
       - name: Run Diagnose
-        run: ./.github/scripts/Diagnose.sh
+        run: |
+          chmod +x ./.github/scripts/Diagnose.sh
+          ./.github/scripts/Diagnose.sh
+
 #      - name: build
 #        run: npm run vsce-package1
