@@ -54,6 +54,10 @@ list_divers(){
   printout "list local installed packages"       "$(npm ll --depth 0)" 0
   printout "list global installed packages"      "$(npm ls -g --depth 0)" 0
 
+  which awk
+  which perl
+  which sed
+
 }
 
 clear
@@ -62,9 +66,3 @@ echo
 
 list_directories
 list_divers
-
-exit
-
-which awk
-which perl
-which sed
