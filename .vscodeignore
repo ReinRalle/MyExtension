@@ -1,7 +1,11 @@
+# .gitattributes
+
 .gitignore
+.vscodeignore
 
 CODE_OF_CONDUCT.md
 CONTRIBUTING.md
+
 images/Electron.pdn
 
 **/*.map
