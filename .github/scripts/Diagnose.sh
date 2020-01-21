@@ -19,6 +19,8 @@ printout "Get current date and time"      "$(date +'%d.%m.%y - %H:%Mh')"
 printout "list root directory"            "$(ls -lAv --color=always --group-directories-first /)"
 printout "list home directory"            "$(ls -lAv --color=always --group-directories-first ~)"
 printout "list current directory"         "$(ls -lAv --color=always --group-directories-first)"
+printout "list script directory"          "$(ls -lAv --color=always --group-directories-first ./.github/scripts/)"
+
 
 printout "show set"                       "$(set)"
 
