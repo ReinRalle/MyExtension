@@ -16,34 +16,8 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
-      - name: build
-        run: npm run vsce-package1
-      #     - name: add to git
-      #       run: git commit -a -m "add *.vsix, lock file?"
 
-      - name: Run multiple commands
-        run: |
-          printf "Current date and time => %s\n" "$(date +'%d.%m.%y - %H:%Mh')"
-
-          echo "git status =>"
-          git status
-
-          echo
-
-          echo "set =>"
-          set
-
-          echo
-
-          echo "ls -la =>"
-          ls -la
-
-          echo
-
-          npm ll --depth 0
-
-          echo "listet global installierte packages (node.js):"
-
-          npm ls -g --depth 0
-
-          ls -la ~
+      - name: Run Diagnose
+        run: ./.github/scripts/Diagnose.sh
+#      - name: build
+#        run: npm run vsce-package1
