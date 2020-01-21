@@ -1,8 +1,8 @@
-# Developer's Diary
+# Developer's Diary :construction:
 
 ## 11.01.20
 
-* `git`
+* `Change: git`
 
   * <details>
     <summary>change .git/config</summary>
@@ -31,12 +31,15 @@
     ```
     </details>
 
-* `github actions`
+* `Info: GitHub Actions` :green_heart:
 
-  * Info: [github actions](https://help.github.com/en/actions)
-  * Info: [Working with GitHub Actions](https://jeffrafter.com/working-with-github-actions/)
+  * [github actions](https://help.github.com/en/actions)
 
-  * change: activate github's `action` in repo
+  * [Working with GitHub Actions](https://jeffrafter.com/working-with-github-actions/)
+
+* `Change: GitHub-Action` :green_heart:
+
+  * activate github's `action` in repo
 
 ## 15.01.20
 
@@ -50,41 +53,42 @@
 	* Ursache: `"MyVar6": "${command:extension.commandvariable.file.fileDirnamePosix}"` in tasks.json produziert den Fehler
   * Fix: erstmal auskommentieren
 
-* `github action`
+* Problem: `GitHub-Action` :green_heart:
 
-  * Problem: kann nicht verstehen, was das Pipe Symbol bei `run: |` soll!
+  * Kann nicht verstehen, was das Pipe Symbol bei `run: |` soll!
 	* Erklärung unter: [github-actions](https://dev.to/bnb/an-unintentionally-comprehensive-introduction-to-github-actions-ci-blm)
 	* hat mit yaml syntax zu tun
 	* Info: [Learn YAML in five minutes!](https://www.codeproject.com/Articles/1214409/Learn-YAML-in-five-minutes)
 
-* `git`
-  * Info: show all config properties in different files:
+* `Info: git`
+
+  * show all config properties in different files:
 
     `git --no-pager config --list --show-origin`
 
-* `markdown`
-	* Info: Strikethrough uses two tildes
-	* Info: [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+* `Info: markdown`
+	* Strikethrough uses two tildes
+	* [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 ## 16.01.20
 
-* `node.js`
-  * Info: [Why and How to Migrate from NPM to Yarn](https://waverleysoftware.com/blog/yarn-vs-npm/)
+* `Info: node.js`
+  * [Why and How to Migrate from NPM to Yarn](https://waverleysoftware.com/blog/yarn-vs-npm/)
 
-* `github-actions`
-  * Info: [GitHub Marketplace](https://github.com/marketplace?type=actions)
+* `Info: GitHub-Actions` :green_heart:
+  * [GitHub Marketplace](https://github.com/marketplace?type=actions)
 
-  * Info: [actions/create-release](https://github.com/actions/create-release)
-  * Info: [Manual workflow triggers in Github Actions](https://stackoverflow.com/questions/58933155/manual-workflow-triggers-in-github-actions/59621799#59621799)
+  * [actions/create-release](https://github.com/actions/create-release)
+  * [Manual workflow triggers in Github Actions](https://stackoverflow.com/questions/58933155/manual-workflow-triggers-in-github-actions/59621799#59621799)
 
-  * Info: [Automating the build and publish process with GitHub Actions (and GitHub Package Registry)](https://stackoverflow.com/questions/58347746/automating-the-build-and-publish-process-with-github-actions-and-github-package)
+  * [Automating the build and publish process with GitHub Actions (and GitHub Package Registry)](https://stackoverflow.com/questions/58347746/automating-the-build-and-publish-process-with-github-actions-and-github-package) :package:
 
-  * Info: [commit changes made in your **`workflow run`** directly to your repo](https://github.com/EndBug/add-and-commit)
+  * [commit changes made in your **`workflow run`** directly to your repo](https://github.com/EndBug/add-and-commit)
 
-  * Info: [GitHub Action to automate deploying VS Code extensions](https://github.com/lannonbr/vsce-action)
+  * [GitHub Action to automate deploying VS Code extensions](https://github.com/lannonbr/vsce-action)
 
   * <details>
-    <summary>Examples</summary>
+    <summary>Action Examples</summary>
 
     * Example:
       ```yaml
@@ -115,15 +119,15 @@
       * [vs_plugin_search_for_errors_on_stackoverflow](https://github.com/kinoooshnik/vs_plugin_search_for_errors_on_stackoverflow/actions)
 
     </details>
-* `github-api`
+* `Info: GitHub-Api`
 
-  * Info: [GitHub REST API v3](https://developer.github.com/v3/)
+  * [GitHub REST API v3](https://developer.github.com/v3/)
 
-  * Info: [Accessing GitHub's REST API with CURL](https://blogs.infosupport.com/accessing-githubs-rest-api-with-curl/)
+  * [Accessing GitHub's REST API with CURL](https://blogs.infosupport.com/accessing-githubs-rest-api-with-curl/)
 
-  * Info: [GitHub Rest Api Example and Uses](https://www.restapiexample.com/use-of-rest-api/github-rest-api-example-uses/)
+  * [GitHub Rest Api Example and Uses](https://www.restapiexample.com/use-of-rest-api/github-rest-api-example-uses/)
 
-  * Info: [Integrating REST APIs into CI/CD pipelines](https://circleci.com/blog/cicd-rest-apis/)
+  * [Integrating REST APIs into CI/CD pipelines](https://circleci.com/blog/cicd-rest-apis/)
 
   * <details>
 
@@ -152,9 +156,9 @@
 
 ## 17.01.20
 
-* `WSL - bash`
+* `Problem: WSL - bash` :bug:
 
-  * ~~Problem~~: mein `weasel` script (`~/weaser_start.sh`) scheint nicht ausgeführt zu werden.
+  * mein `weasel` script (`~/weaser_start.sh`) scheint nicht ausgeführt zu werden.
 
   * Ursache: bash .profile file`~/.profile` wird nicht aufgerufen, wenn unter vscode ein neues Terminal unter "remote wsl" geöffnet wird.
 
@@ -169,8 +173,8 @@
 
       Anotation (2): argument `-l` => login shell (run `~/.profile`)
 
-* `node.js`
-  * Change: um mögliche Überchneidungen auszuschliessen, versuche ich mal, `node.js` komplett (windows & wsl) zu deinstallieren. Im nächsten Schritt installiere ich `node.js` mithilfe von [nvm](https://github.com/nvm-sh/nvm/blob/master/README.md) unter `Remote - WSL`:
+* `Change: node.js`
+  * Um mögliche Überchneidungen auszuschliessen, versuche ich mal, `node.js` komplett (windows & wsl) zu deinstallieren. Im nächsten Schritt installiere ich `node.js` mithilfe von [nvm](https://github.com/nvm-sh/nvm/blob/master/README.md) unter `Remote - WSL`:
 
     ```bash
     # install nvm
@@ -178,9 +182,9 @@
     ```
 ## 18.01.20
 
-* `node.js`
+* `Problem: node.js` :bug:
 
-  * Problem: `nvm` lässt sich weder von einem shell script noch von einem `package.json` script nutzen.
+  * `nvm` lässt sich weder von einem shell script noch von einem `package.json` :package: script nutzen.
 
     * Info: `nvm` ist eine `builin function` von bash
 
@@ -235,30 +239,67 @@
 
   * Info: listet alle global installierten Packages
 
-    ```
-    > npm ls -g --depth 0
+    ```bash
+    #!/bin/bash
 
+    # test.sh
+
+    npm ls -g --depth 0
+    ```
+    out:
+    ```
     /home/reinralle/.nvm/versions/node/    v12.14.0/lib
     ├── npm@6.13.6
     ├── npm-check@5.9.0
     └── npm-check-updates@4.0.1
     ```
-  * Problem: alle Scripts im `package.json` file funktionieren nicht mehr!
+  * Problem: alle Scripts im `package.json` :package: file funktionieren nicht mehr! :bug:
     * Error: `N/A: version "N/A -> N/A" is not yet installed`
     * Ursache: hab mit `nvn` 'rumgespielt'
     * Fix:
 
       ```bash
       # Eingabe im WSL Terminal
-
-      # points "default" at the latest installed Node version
+      #   points "default" at the latest installed Node version
 
       nvm alias default node
       ```
-* `Markdown`
+* `Info: Markdown`
 
-  * Info: interaktiver Inhalt
-    * Info: [mozilla: \<details\>\</details\>, \<summery\>\</summery\>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details)
-    * Info: [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
+  * interaktiver Inhalt
+    * [mozilla: \<details\>\</details\>, \<summery\>\</summery\>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details)
 
-  * Info: [Complete list of github markdown emoji markup ](https://gist.github.com/rxaviers/7360908)
+    * [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
+
+  * [Complete list of github markdown emoji markup ](https://gist.github.com/rxaviers/7360908)
+
+## 20.01.20
+
+* `Info: github-actions` :green_heart:
+
+  * [GitHub Actions in Action](https://slides.com/bahmutov/github-actions-in-action/#/) (Slide)
+
+  * [Creating and using encrypted secrets](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets)
+
+  * `GitHub`
+
+    * [Actions](https://github.com/actions)
+
+    * [Marketplace](https://github.com/marketplace?type=actions)
+
+      * [Create a Release](https://github.com/marketplace/actions/create-a-release)
+
+      * [Upload a Release Asset](https://github.com/marketplace/actions/upload-a-release-asset)
+
+    * other
+      * [publish-to-github-action](https://github.com/mikeal/publish-to-github-action)
+
+* `Info: git`
+  * [GitCommitEmoji.md](https://gist.github.com/parmentf/035de27d6ed1dce0b36a)
+
+  * `emoji's`
+     * :construction: => work in progress
+     * :lipstick: => format, Cosmetic
+     * :bug: => Bugfix
+     * :green_heart: => Continuous Integration
+     * :package: => Package.json in JS
