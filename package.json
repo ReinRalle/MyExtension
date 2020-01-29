@@ -70,6 +70,7 @@
 	},
 	"scripts": {
 		"build": "tsc -b -v",
+		"postbuild": "cp -u ./src/html/favicon.ico ./src/html/index.html ./out/html",
 		"clean": "tsc -b --clean",
 		"compile": "tsc -p ./",
 		"postcompile": "terser ./out/ext/extension.js -mc -o ./out/ext/extension.js ",
