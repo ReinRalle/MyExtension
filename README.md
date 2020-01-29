@@ -5,7 +5,7 @@
 Mache es mal kurz in deutsch:
 
 * Dies ist meine erste Extension für **vscode**.
-* bin programmtechnischer **Anfänger** in folgenden Bereichen:
+* Bin programmtechnischer **Anfänger** in folgenden Bereichen (eigentlich in allem :grin:):
 
   * `markdown`
   * `vscode`
@@ -15,14 +15,14 @@ Mache es mal kurz in deutsch:
     * `TypeScript`
   * `git`
 
-* Diese Extension verfolgt das Ziel, überhaupt erst einmal ein **Grundgerüst** zu erstellen und zu verstehen (learning by doing).
+* Diese Extension soll dazu dienen, überhaupt erst einmal ein **Grundgerüst** zu erstellen/verstehen (learning by doing).
 
-* dazu gehört auch das **publishing**, was hier auf github erfolgt.
+* Dazu gehört auch die Veröffentlichung (`publishing`)  auf dem [VsCode Marketplace](https://marketplace.visualstudio.com/vscode).
 
-* ansonsten hat die Extension keinen besonderen Zweck
+* Ansonsten verfolgt die Extension vorerst kein besonderes Ziel.
 * Die Nutzung sollte nur zu Lernzwecken erfolgen (natürlich auf eigene Gefahr).
 
-Sollte jemand etwas zu kommentieren/kritisieren haben, kann er das hier sehr gerne tun.
+Sollte jemand etwas zu kommentieren/kritisieren haben, kann er das sehr gerne tun.
 
 ## `Entwicklung`:
 
