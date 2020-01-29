@@ -368,35 +368,173 @@
 
 ## 22.01.20
 
-* `https://github.com/ReinRalle/MyExtension/suites/412606667/logs`
+* `Info: GitHub-Api`
 
-```bash
-#!/bin/bash
+  * Versuch, über die `github-api` an die logfiles der `github-actions` zu gelangen
 
-# GET https://api.github.com/repos/<org>/<repo>/check-suites/<check_suite_id>/check-runs
+    <details>
+    <summary>bash</summary>
 
-local ORG="reinralle"
-local REPO="myextension"
+    ```bash
+    #!/bin/bash
 
-local LINK="https://api.github.com/repos/<org>/<repo>/check-suites/<check_suite_id>/check-runs"
+    get_log(){
 
-```
+      # https://github.com/ReinRalle/MyExtension/suites/412606667/logs
+
+      # GET https://api.github.com/repos/<org>/<repo>/check-suites/<check_suite_id>/check-runs
+
+      local org="reinralle"
+      local repo="myextension"
+      local check_suite_id="412606667"
+      local header="Accept: application/vnd.github.antiope-preview+json"
+
+      local link="https://api.github.com/repos/$org/$repo/check-suites/$check_suite_id/check-runs"
+
+      curl -sH "$header" "$link"
+
+      # curl -sH "Accept: application/vnd.github.antiope-preview+json" "https://api.github.com/repos/reinralle/myextension/check-suites/412606667/check-runs"
+
+    }
+
+    get_log
+    ```
+    <details>
+    <summary>output</summary>
+
+    ```json
+    {
+      "total_count": 1,
+      "check_runs": [
+        {
+          "id": 401448925,
+          "node_id": "MDg6Q2hlY2tSdW40MDE0NDg5MjU=",
+          "head_sha": "fccaf94074f4a8d8a0fced555ebf125e96e6129e",
+          "external_id": "ca395085-040a-526b-2ce8-bdc85f692774",
+          "url": "https://api.github.com/repos/ReinRalle/MyExtension/check-runs/401448925",
+          "html_url": "https://github.com/ReinRalle/MyExtension/runs/401448925",
+          "details_url": "https://help.github.com/en/actions",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2020-01-21T18:22:31Z",
+          "completed_at": "2020-01-21T18:22:51Z",
+          "output": {
+            "title": null,
+            "summary": null,
+            "text": null,
+            "annotations_count": 0,
+            "annotations_url": "https://api.github.com/repos/ReinRalle/MyExtension/    check-runs/401448925/annotations"
+          },
+          "name": "build",
+          "check_suite": {
+            "id": 412606667
+          },
+          "app": {
+            "id": 15368,
+            "slug": "github-actions",
+            "node_id": "MDM6QXBwMTUzNjg=",
+            "owner": {
+              "login": "github",
+              "id": 9919,
+              "node_id": "MDEyOk9yZ2FuaXphdGlvbjk5MTk=",
+              "avatar_url": "https://avatars1.githubusercontent.com/u/9919?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/github",
+              "html_url": "https://github.com/github",
+              "followers_url": "https://api.github.com/users/github/followers",
+              "following_url": "https://api.github.com/users/github/following{/other_user}",
+              "gists_url": "https://api.github.com/users/github/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/github/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/github/subscriptions",
+              "organizations_url": "https://api.github.com/users/github/orgs",
+              "repos_url": "https://api.github.com/users/github/repos",
+              "events_url": "https://api.github.com/users/github/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/github/received_events",
+              "type": "Organization",
+              "site_admin": false
+            },
+            "name": "GitHub Actions",
+            "description": "Automate your workflow from idea to production",
+            "external_url": "https://help.github.com/en/actions",
+            "html_url": "https://github.com/apps/github-actions",
+            "created_at": "2018-07-30T09:30:17Z",
+            "updated_at": "2019-12-10T19:04:12Z",
+            "permissions": {
+              "actions": "write",
+              "checks": "write",
+              "contents": "write",
+              "deployments": "write",
+              "issues": "write",
+              "metadata": "read",
+              "packages": "write",
+              "pages": "write",
+              "pull_requests": "write",
+              "repository_hooks": "write",
+              "repository_projects": "write",
+              "statuses": "write",
+              "vulnerability_alerts": "read"
+            },
+            "events": [
+              "check_run",
+              "check_suite",
+              "create",
+              "delete",
+              "deployment",
+              "deployment_status",
+              "fork",
+              "gollum",
+              "issues",
+              "issue_comment",
+              "label",
+              "milestone",
+              "page_build",
+              "project",
+              "project_card",
+              "project_column",
+              "public",
+              "pull_request",
+              "pull_request_review",
+              "pull_request_review_comment",
+              "push",
+              "registry_package",
+              "release",
+              "repository",
+              "repository_dispatch",
+              "status",
+              "watch"
+            ]
+          },
+          "pull_requests": []
+        }
+      ]
+    }
+    ```
+
+    </details>
+
+    </details>
+
+
 ## 26.01.20
 
-* `node-jq`: `sudo apt install libtool`
-* `export TERM=xterm-256color`
-* [typescript](https://code-examples.net/de/docs/typescript/index)
-* [TypeScript Tutorials](https://www.logicbig.com/tutorials/misc/typescript.html)
+* `info: typescript`
+  * [typescript](https://code-examples.net/de/docs/typescript/index)
+  * [TypeScript Tutorials](https://www.logicbig.com/tutorials/misc/typescript.html)
+  * [Debugging Typescript in Visual Studio Code and Chrome](https://blogs.msdn.microsoft.com/jtarquino/2016/01/24/debugging-typescript-in-visual-studio-code-and-chrome/)
 
-* starte `http-server` vom Repo root Verzeichnis (workspaceroot): `http-server ./src/html` (port: 8080)
+* `info: node`
+  * TODO: `node-jq`: `sudo apt install libtool` ???
 
-* node package mit curl suchen :
-  * [npms.io](https://npms.io/)
-    * [api docs](https://api-docs.npms.io/)
-    * `curl "https://api.npms.io/v2/search?q=yarn" | jq ".results[].package.links.npm"`
+  * node packages mit curl suchen :
+    * [npms.io](https://npms.io/)
+      * [api docs](https://api-docs.npms.io/)
+      * `curl "https://api.npms.io/v2/search?q=yarn" | jq ".results[].package.links.npm"`
 
-* [Debugging Typescript in Visual Studio Code and Chrome](https://blogs.msdn.microsoft.com/jtarquino/2016/01/24/debugging-typescript-in-visual-studio-code-and-chrome/)
+  * starte `http-server` vom Repo root Verzeichnis (workspaceroot): `http-server ./src/html` (port: 8080)
 
-* [vscode-debug-specs](https://74th.github.io/vscode-debug-specs/javascript_chrome/)
+* `info: vscode`
+  * [vscode-debug-specs](https://74th.github.io/vscode-debug-specs/javascript_chrome/)
 
-* [Box-drawing character](https://en.wikipedia.org/wiki/Box-drawing_character)
+* `info: divers`
+  * `export TERM=xterm-256color`
+  * [Box-drawing character](https://en.wikipedia.org/wiki/Box-drawing_character)
