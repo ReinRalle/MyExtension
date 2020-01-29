@@ -2,7 +2,7 @@
 
 # chmod +x Diagnose.sh
 
-TRENNLINIE="------------------------------------------------------------------------------------"
+SEPERATOR="------------------------------------------------------------------------------------"
 
 printout(){ # $1=heading, $2=string, $3=enclose (0 = no enclose, 1 = enclose in "'")
 
@@ -13,7 +13,7 @@ printout(){ # $1=heading, $2=string, $3=enclose (0 = no enclose, 1 = enclose in 
     1)  str="$(echo "'$2'" | awk '{ print "  " $0 }')";; # indent with enclose in "'"
   esac
 
-  printf "%s\n\n%s\n\n%s\n\n" "$1" "$str" "$TRENNLINIE"
+  printf "%s\n\n%s\n\n%s\n\n" "$1" "$str" "$SEPERATOR"
 
 }
 
