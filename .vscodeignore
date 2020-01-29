@@ -1,24 +1,24 @@
-# .gitattributes
 
 .gitignore
 .vscodeignore
 
-CODE_OF_CONDUCT.md
-CONTRIBUTING.md
 tsconfig-base.json
 
-images/Electron.pdn
-out/ext/tsconfig.tsbuildinfo
+src/ext/images/Electron.pdn
 
 **/*.map
 **/*.ts
+**/*.zip
+**/*.vsix
+
 **/tsconfig.json
+**/tsconfig.tsbuildinfo
 **/tslint.json
 
 .github/**
 .vscode/**
-.vscode-test/**
+
 out/html/**
-out/scripts/**
+out/dev/**
 out/test/**
 src/**
