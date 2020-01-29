@@ -49,7 +49,7 @@
 		]
 	}],
 	"tasks": [{
-		"label": "npm --- watch",
+		"label": "npm - watch",
 		"type": "npm",
 		"script": "watch1",
 		"problemMatcher": "$tsc-watch",
