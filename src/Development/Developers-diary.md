@@ -299,18 +299,13 @@
 
   * `emoji's`
 
-    | emoji               | description              |
-    | :------------------:|--------------------------|
-    | :tada:              | initial commit           |
-    | :construction:      | Work in progress         |
-    | :lipstick:          | Cosmetic                 |
-    | :bug:               | Bugfix                   |
-    | :green_heart:       | Continuous Integration   |
-    | :package:           | Package.json in JS       |
-    | :rocket:            | Deploying stuff          |
-    | :arrow_up:          | Upgrading dependencies   |
-    | :art:               | Improve format/structure |
-    | :lock:              | Security                 |
+    | emoji           | description            | emoji       | description              |
+    | :-------------: | ---------------------- | :---------: | ------------------------ |
+    | :tada:          | Initial commit         | :package:   | Package.json in JS       |
+    | :construction:  | Work in progress       | :rocket:    | Deploying stuff          |
+    | :lipstick:      | Cosmetic               | :arrow_up:  | Upgrading dependencies   |
+    | :bug:           | Bugfix                 | :art:       | Improve format/structure |
+    | :green_heart:   | Continuous Integration | :lock:      | Security                 |
 
 ## 21.01.20
 
