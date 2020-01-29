@@ -4,14 +4,21 @@
 // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
 {
 	"version": "0.2.0",
-	"configurations": [
+	"configurations": [{
+			// start server with: "http-server ./src/html"
+			"type": "chrome",
+			"request": "launch",
+			"name": "Launch Chrome 11",
+			"url": "http://localhost:8080",
+			"sourceMaps": true,
+			"webRoot": "./src/html"
+		},
 		{
 			"type": "chrome",
 			"request": "launch",
 			"name": "launch Chrome",
 			"url": "http://localhost:3000",
 			"webRoot": "${workspaceFolder}/public"
-
 		},
 		{
 			"name": "Launch via npm",
@@ -34,6 +41,7 @@
 		{
 			"name": "Launch current opened ts file",
 			"type": "node",
+			//	"stopOnEntry": true,
 			"request": "launch",
 			"program": "${file}",
 			"preLaunchTask": "${defaultBuildTask}",
