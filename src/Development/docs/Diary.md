@@ -538,3 +538,13 @@
 * `info: divers`
   * `export TERM=xterm-256color`
   * [Box-drawing character](https://en.wikipedia.org/wiki/Box-drawing_character)
+
+## 29.01.20
+
+* `info: vscode`
+  * [EditorConfig](https://editorconfig.org/)
+  * [EditorConfig extension for Visual Studio Code](https://github.com/editorconfig/editorconfig-vscode)
+
+* `info: git`
+  * [Letzten lokalen Commit Rückgängig machen](https://wiki.linuxmuster.net/archiv/entwicklung:meta:git-tutorial:git-local-fix-last-commit)
+
