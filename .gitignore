@@ -2,4 +2,4 @@ out
 node_modules
 *.vsix
 *.zip
-src/Development/tmp
+src/dev/scripts/github_api/tmp
