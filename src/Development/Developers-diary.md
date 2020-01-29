@@ -298,6 +298,7 @@
   * [GitCommitEmoji.md](https://gist.github.com/parmentf/035de27d6ed1dce0b36a)
 
   * `emoji's`
+
     | emoji               | description              |
     | :------------------:|--------------------------|
     | :tada:              | initial commit           |
@@ -391,3 +392,16 @@ local LINK="https://api.github.com/repos/<org>/<repo>/check-suites/<check_suite_
 * `export TERM=xterm-256color`
 * [typescript](https://code-examples.net/de/docs/typescript/index)
 * [TypeScript Tutorials](https://www.logicbig.com/tutorials/misc/typescript.html)
+
+* starte `http-server` vom Repo root Verzeichnis (workspaceroot): `http-server ./src/html` (port: 8080)
+
+* node package mit curl suchen :
+  * [npms.io](https://npms.io/)
+    * [api docs](https://api-docs.npms.io/)
+    * `curl "https://api.npms.io/v2/search?q=yarn" | jq ".results[].package.links.npm"`
+
+* [Debugging Typescript in Visual Studio Code and Chrome](https://blogs.msdn.microsoft.com/jtarquino/2016/01/24/debugging-typescript-in-visual-studio-code-and-chrome/)
+
+* [vscode-debug-specs](https://74th.github.io/vscode-debug-specs/javascript_chrome/)
+
+* [Box-drawing character](https://en.wikipedia.org/wiki/Box-drawing_character)
