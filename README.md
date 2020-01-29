@@ -1,4 +1,7 @@
+![CI](https://github.com/ReinRalle/MyExtension/workflows/CI/badge.svg?branch=master)
+
 # My Extension
+
 
 ***Aktuell:*** Vielleicht ist auch der [Entwicklungsverlauf](src/dev/docs/Diary.md) interessant!
 
