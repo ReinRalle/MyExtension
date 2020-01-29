@@ -298,8 +298,96 @@
   * [GitCommitEmoji.md](https://gist.github.com/parmentf/035de27d6ed1dce0b36a)
 
   * `emoji's`
-     * :construction: => work in progress
-     * :lipstick: => format, Cosmetic
-     * :bug: => Bugfix
-     * :green_heart: => Continuous Integration
-     * :package: => Package.json in JS
+    | emoji               | description              |
+    | :------------------:|--------------------------|
+    | :tada:              | initial commit           |
+    | :construction:      | Work in progress         |
+    | :lipstick:          | Cosmetic                 |
+    | :bug:               | Bugfix                   |
+    | :green_heart:       | Continuous Integration   |
+    | :package:           | Package.json in JS       |
+    | :rocket:            | Deploying stuff          |
+    | :arrow_up:          | Upgrading dependencies   |
+    | :art:               | Improve format/structure |
+    | :lock:              | Security                 |
+
+## 21.01.20
+
+* `Problem:` neue action scripts (*.sh) lassen sich nicht ausführen
+
+  * `Ursache:` falsche 'permissions'
+
+  * `Lösung:`
+
+    <details>
+    <summary>bash</summary>
+
+    ```bash
+    #!/bin/bash
+
+    # must stay in ./.github/scripts
+
+    # helper
+    indent(){ # $1=string, $2=0 (no enclose), $2=1 (enclose in "'")
+
+      case "$2" in
+        0)  echo "$(echo  "$1"  | awk '{ print "  " $0 }')";;
+        1)  echo "$(echo "'$1'" | awk '{ print "  " $0 }')";;
+      esac
+
+    }
+
+    clear
+
+    # change working directory to this script folder (bash scripts run in subshell!)
+    cd $(dirname $0)
+
+    # store contens of the script folder
+    LIST_PWD=$(ls -lAv --color=always --group-directories-first)
+
+    # store staged contents’ mode bits, object name and stage number (in script folder only)
+    # [<tag> ]<mode> <object> <stage> <file>
+    LIST_STAGED="$(git ls-files --stage)"
+
+    echo
+
+    printf "current path: '%s'\n\n%s\n\n"  "$PWD" "$(indent "$LIST_PWD" 0)"
+
+    printf "git staged files:\n\n%s\n\n"   "$(indent "$LIST_STAGED" 0)"
+
+    # update the file permission to: execute
+
+    # git update-index --chmod=+x 'Diagnose.sh'
+    # git update-index --chmod=+x 'decrypt_secrets.sh'
+
+    # to check: run 'git ls-files --stage' again
+
+    # if all fine, commit it, for example: 'git commit -m "made a file executable"' and push
+    ```
+    </details>
+
+  * `Info: git`
+
+    * [Change file permissions when working with git repo’s on windows](https://medium.com/@akash1233/change-file-permissions-when-working-with-git-repos-on-windows-ea22e34d5cee)
+
+## 22.01.20
+
+* `https://github.com/ReinRalle/MyExtension/suites/412606667/logs`
+
+```bash
+#!/bin/bash
+
+# GET https://api.github.com/repos/<org>/<repo>/check-suites/<check_suite_id>/check-runs
+
+local ORG="reinralle"
+local REPO="myextension"
+
+local LINK="https://api.github.com/repos/<org>/<repo>/check-suites/<check_suite_id>/check-runs"
+
+```
+## 26.01.20
+
+* `node-jq`: `sudo apt install libtool`
+* `export TERM=xterm-256color`
+* [typescript](https://code-examples.net/de/docs/typescript/index)
+* [TypeScript Tutorials](https://www.logicbig.com/tutorials/misc/typescript.html)
