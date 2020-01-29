@@ -1,4 +1,4 @@
-![CI](https://github.com/ReinRalle/MyExtension/workflows/CI/badge.svg?branch=master)
+![CI](https://github.com/ReinRalle/MyExtension/workflows/CI/badge.svg?branch=master) ![CI](https://github.com/ReinRalle/MyExtension/workflows/CI/badge.svg?event=status)
 
 # My Extension
 
