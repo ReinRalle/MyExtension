@@ -116,7 +116,7 @@ export async function activate(context: vscode.ExtensionContext) {
 		console.log("ttt");
 	}
 
-	/** print txt to log 
+	/** print txt to log
 	 *  @param txt  text string
 	*/
 	function LogWrite(txt: string): void {
@@ -141,6 +141,7 @@ export async function activate(context: vscode.ExtensionContext) {
 		);
 	};
 }
+
 
 /**  this method is called when your extension is deactivated */
 export function deactivate(): void {
