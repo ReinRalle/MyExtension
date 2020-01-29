@@ -1,6 +1,6 @@
 # My Extension
 
-***Aktuell:*** Vielleicht auch interessant [Entwicklungsverlauf](src/dev/docs/diary.md)
+***Aktuell:*** Vielleicht ist auch der [Entwicklungsverlauf](src/dev/docs/Diary.md) interessant!
 
 Mache es mal kurz in deutsch:
 
