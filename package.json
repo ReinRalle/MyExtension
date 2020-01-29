@@ -6,7 +6,7 @@
 	"publisher": "ReinRalle",
 	"license": "MIT",
 	"private": true,
-	"icon": "images/Electron.png",
+	"icon": "/out/ext/images/Electron.png",
 	"keywords": [
 		"vscode-extension",
 		"example"
@@ -70,7 +70,7 @@
 	},
 	"scripts": {
 		"build": "tsc -b -v",
-		"postbuild": "cp -u ./src/html/favicon.ico ./src/html/index.html ./out/html",
+		"postbuild": "cp -u ./src/html/*.ico ./src/html/index.html ./out/html && cp -u ./src/ext/images/*png ./out/ext",
 		"clean": "tsc -b --clean",
 		"compile": "tsc -p ./",
 		"postcompile": "terser ./out/ext/extension.js -mc -o ./out/ext/extension.js ",
