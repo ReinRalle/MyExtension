@@ -1,5 +1,7 @@
 # My Extension
 
+***Aktuell:*** Vielleicht auch interessant [Entwicklungsverlauf](src/dev/docs/diary.md)
+
 Mache es mal kurz in deutsch:
 
 * Dies ist meine erste Extension für **vscode**.

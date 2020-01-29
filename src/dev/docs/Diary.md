@@ -547,4 +547,3 @@
 
 * `info: git`
   * [Letzten lokalen Commit Rückgängig machen](https://wiki.linuxmuster.net/archiv/entwicklung:meta:git-tutorial:git-local-fix-last-commit)
-
