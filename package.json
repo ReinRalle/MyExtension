@@ -119,6 +119,7 @@
 		"vsce-show-my-extension": "vsce show reinralle.myextension --json",
 		"vsce-package1": "vsce package",
 		"vsce-package2": "vsce package --out E:/test.vsix",
+		"vsce-package3": "vsce package --out ./test.vsix.zip",
 		"vscode:prepublish": "npm run compile",
 		"watch1": "tsc -watch -p ./"
 	},
