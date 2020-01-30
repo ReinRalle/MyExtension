@@ -11,8 +11,8 @@ src/ext/images/Electron.pdn
 # bestimmte Verzeichnisse (incl. Unterverzeichnisse)
 .github/**
 .vscode/**
-out/html/**
-out/dev/**
+dist/html/**
+dist/dev/**
 src/**
 
 # Dateien mit bestimmten Endungen (global)

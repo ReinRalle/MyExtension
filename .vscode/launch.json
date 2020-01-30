@@ -45,7 +45,7 @@
 			"request": "launch",
 			"program": "${file}",
 			"preLaunchTask": "${defaultBuildTask}",
-			"outFiles": ["${workspaceFolder}/out/**/*.js"]
+			"outFiles": ["${workspaceFolder}/dist/**/*.js"]
 		},
 		{
 			"name": "Launch Extension",
@@ -56,7 +56,7 @@
 				"--extensionDevelopmentPath=${workspaceFolder}"
 			],
 			"outFiles": [
-				"${workspaceFolder}/out/**/*.js"
+				"${workspaceFolder}/dist/**/*.js"
 			],
 			"preLaunchTask": "${defaultBuildTask}"
 		},
@@ -67,10 +67,10 @@
 			"runtimeExecutable": "${execPath}",
 			"args": [
 				"--extensionDevelopmentPath=${workspaceFolder}",
-				"--extensionTestsPath=${workspaceFolder}/out/test/suite/index"
+				"--extensionTestsPath=${workspaceFolder}/dist/test/suite/index"
 			],
 			"outFiles": [
-				"${workspaceFolder}/out/test/**/*.js"
+				"${workspaceFolder}/dist/test/**/*.js"
 			],
 			"preLaunchTask": "${defaultBuildTask}"
 		}
