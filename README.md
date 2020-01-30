@@ -1,7 +1,6 @@
-![CI](https://github.com/ReinRalle/MyExtension/workflows/CI/badge.svg?branch=master) ![CI](https://github.com/ReinRalle/MyExtension/workflows/CI/badge.svg?event=status)
+![CI](https://github.com/ReinRalle/MyExtension/workflows/CI/badge.svg?branch=master)
 
 # My Extension
-
 
 ***Aktuell:*** Vielleicht ist auch der [Entwicklungsverlauf](src/dev/docs/Diary.md) interessant!
 
