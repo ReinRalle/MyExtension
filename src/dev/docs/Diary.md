@@ -391,9 +391,9 @@
 
       local link="https://api.github.com/repos/$org/$repo/check-suites/$check_suite_id/check-runs"
 
-      curl -sH "$header" "$link"
+      curl -sH "$header" "$link" | jq "."
 
-      # curl -sH "Accept: application/vnd.github.antiope-preview+json" "https://api.github.com/repos/reinralle/myextension/check-suites/412606667/check-runs"
+      # curl -sH "Accept: application/vnd.github.antiope-preview+json" "https://api.github.com/repos/reinralle/myextension/check-suites/412606667/check-runs" | jq "."
 
     }
 
@@ -513,7 +513,6 @@
     </details>
 
     </details>
-
 
 ## 26.01.20
 
