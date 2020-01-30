@@ -1,7 +1,7 @@
 # bestimmte Dateien (in bestimmten Verzeichnissen)
 .gitignore
 tsconfig-base.json
-src/ext/images/Electron.pdn
+assets/Electron.pdn
 
 # bestimmte Dateien (global)
 **/tsconfig.json
