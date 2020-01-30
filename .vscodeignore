@@ -1,7 +1,7 @@
 # bestimmte Dateien (in bestimmten Verzeichnissen)
 .gitignore
-tsconfig-base.json
 assets/Electron.pdn
+tsconfig-base.json
 
 # bestimmte Dateien (global)
 **/tsconfig.json
@@ -11,12 +11,13 @@ assets/Electron.pdn
 # bestimmte Verzeichnisse (incl. Unterverzeichnisse)
 .github/**
 .vscode/**
-dist/html/**
 dist/dev/**
+dist/html/**
+dist/test/**
 src/**
 
 # Dateien mit bestimmten Endungen (global)
 **/*.map
 **/*.ts
-**/*.zip
 **/*.vsix
+**/*.zip

@@ -7,5 +7,7 @@
 		"path": "./src/ext"
 	}, {
 		"path": "./src/html"
+	}, {
+		"path": "./src/test"
 	}]
 }
