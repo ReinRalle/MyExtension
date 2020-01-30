@@ -1,8 +1,9 @@
 {
-    //	"compilerOptions": {
+	// TODO:
+	//	"compilerOptions": {
 	//		"module": "commonjs",
 	//		"target": "es6",
-	//	//	"outDir": "out",
+	//		"outDir": "out",
 	//		"lib": [
 	//			"es6"
 	//		],
@@ -21,23 +22,23 @@
 	//		"noUnusedLocals": true, // Report errors on unused locals.
 	//		"strictNullChecks": true, // Enable strict null checks.
 	//		"allowJs": true
-    //	},
-    
-    //	"exclude": [
+	//	},
+
+	//	"exclude": [
 	//	"./src/scripts",
 	//	"./src/test"
 	//	]
 
-    "compilerOptions": {
-        "declaration": true,
-        "target": "es6",
-        "module": "commonjs",
-        "strict": true,
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
-        "noImplicitReturns": true,
-        "noFallthroughCasesInSwitch": true,
-        "composite": true,
-        "sourceMap": true
-    }
+	"compilerOptions": {
+		"declaration": true,
+		"target": "es6",
+		"module": "commonjs",
+		"strict": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"composite": true,
+		"sourceMap": true
+	}
 }
