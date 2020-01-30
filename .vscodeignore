@@ -1,24 +1,22 @@
-
+# bestimmte Dateien (in bestimmten Verzeichnissen)
 .gitignore
-.vscodeignore
-
 tsconfig-base.json
-
 src/ext/images/Electron.pdn
 
-**/*.map
-**/*.ts
-**/*.zip
-**/*.vsix
-
+# bestimmte Dateien (global)
 **/tsconfig.json
 **/tsconfig.tsbuildinfo
 **/tslint.json
 
+# bestimmte Verzeichnisse (incl. Unterverzeichnisse)
 .github/**
 .vscode/**
-
 out/html/**
 out/dev/**
-out/test/**
 src/**
+
+# Dateien mit bestimmten Endungen (global)
+**/*.map
+**/*.ts
+**/*.zip
+**/*.vsix
