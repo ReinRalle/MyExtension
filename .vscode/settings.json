@@ -13,6 +13,10 @@
     "javascript.referencesCodeLens.showOnAllFunctions": true,
     "code-runner.saveFileBeforeRun": true,
     "code-runner.runInTerminal": true,
+    "code-runner.executorMap": {
+        "javascript": "node $fullFileName && rm -f $dirWithoutTrailingSlash\\\\tempCodeRunnerFile.js",
+        "typescript": "npx ts-node $fullFileName"
+    },
     "javascript.implicitProjectConfig.checkJs": true,
     "eslint.alwaysShowStatus": true,
     "eslint.codeAction.showDocumentation": {
