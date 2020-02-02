@@ -11,9 +11,6 @@ tsconfig-base.json
 # bestimmte Verzeichnisse (incl. Unterverzeichnisse)
 .github/**
 .vscode/**
-dist/dev/**
-dist/html/**
-dist/test/**
 src/**
 
 # Dateien mit bestimmten Endungen (global)
