@@ -38,6 +38,7 @@
 		"noUnusedParameters": true,
 		"noImplicitReturns": true,
 		"noFallthroughCasesInSwitch": true,
+		"removeComments": true,
 		"composite": true,
 		"sourceMap": true
 	}
