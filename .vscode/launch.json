@@ -5,13 +5,14 @@
 {
 	"version": "0.2.0",
 	"configurations": [{
-			// start server with: "http-server ./src/html"
+			// start server with: "http-server ./dist/html"
 			"type": "chrome",
 			"request": "launch",
-			"name": "Launch Chrome 11",
+			"name": "Launch Chrome (localhost)",
 			"url": "http://localhost:8080",
 			"sourceMaps": true,
-			"webRoot": "./src/html"
+			"trace": true,
+			"webRoot": "./dist/html",
 		},
 		{
 			"type": "chrome",
@@ -34,18 +35,32 @@
 			"type": "node",
 			"request": "launch",
 			"program": "${file}",
+			"protocol": "inspector",
 			"skipFiles": [
 				"<node_internals>/**"
 			]
+		}, {
+			"type": "node",
+			"request": "launch",
+			"name": "Current TS File",
+			"program": "${file}",
+			"console": "integratedTerminal",
+			"sourceMaps": true,
+			"args": ["123", "456 789", "${workspaceFolder}"],
+			"outFiles": ["${fileDirname}/*.js"]
 		},
 		{
 			"name": "Launch current opened ts file",
 			"type": "node",
-			//	"stopOnEntry": true,
+			"protocol": "inspector",
+			"stopOnEntry": true,
+			"sourceMaps": true,
 			"request": "launch",
 			"program": "${file}",
-			"preLaunchTask": "${defaultBuildTask}",
-			"outFiles": ["${workspaceFolder}/dist/**/*.js"]
+
+			//	"preLaunchTask": "${defaultBuildTask}",
+			//	"outFiles": ["${workspaceFolder}/dist/**/*.js"]
+			"outFiles": ["${workspaceFolder}/src/tools"]
 		},
 		{
 			"name": "Launch Extension",
