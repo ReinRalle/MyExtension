@@ -8,6 +8,6 @@
 	}, {
 		"path": "./src/html"
 	}, {
-		"path": "./src/test"
+		"path": "./src/tools"
 	}]
 }

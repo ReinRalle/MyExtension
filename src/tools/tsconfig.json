@@ -1,6 +1,6 @@
 {
     "extends": "../../tsconfig-base.json",
-    "files": ["app.ts"],
+    "files": ["copy_assets.ts"],
     "compilerOptions": {
         "outDir": ".",
         "sourceRoot": "."
