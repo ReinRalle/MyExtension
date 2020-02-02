@@ -66,5 +66,3 @@ echo
 
 list_directories
 list_divers
-
-format --help

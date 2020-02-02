@@ -546,3 +546,9 @@
 
 * `info: git`
   * [Letzten lokalen Commit Rückgängig machen](https://wiki.linuxmuster.net/archiv/entwicklung:meta:git-tutorial:git-local-fix-last-commit)
+
+## 30.01.20
+
+* `info: VsCode`
+  * [Extension Manifest](https://code.visualstudio.com/api/references/extension-manifest)
+
