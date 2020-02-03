@@ -32,9 +32,10 @@ printf "git staged files:\n\n%s\n\n"   "$(indent "$LIST_STAGED" 0)"
 
 # update the file permission to: execute
 
-# git update-index --chmod=+x 'Diagnose.sh'
+git update-index --chmod=+x 'Diagnose.sh'
 # git update-index --chmod=+x 'decrypt_secrets.sh'
 
 # to check: run 'git ls-files --stage' again
+git ls-files --stage
 
 # if all fine, commit it, for example: 'git commit -m "made a file executable"' and push
