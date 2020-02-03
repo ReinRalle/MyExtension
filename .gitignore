@@ -3,4 +3,4 @@ node_modules
 *.vsix
 *.zip
 src/dev/scripts/github_api/tmp
-tsconfig.tsbuildinfo
+**/tsconfig.tsbuildinfo
