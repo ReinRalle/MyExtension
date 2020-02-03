@@ -206,8 +206,8 @@
         "signature": "4218ced3933a31eed1278d350dd63c5900df0f0904f57d61c054d7a4b83dbe4c"
       },
       "../../node_modules/@types/node/module.d.ts": {
-        "version": "a8ddda059f6cd8b531f62dc2d66c8132bfacc6fae9d5da1dc4ad608712360c5f",
-        "signature": "a8ddda059f6cd8b531f62dc2d66c8132bfacc6fae9d5da1dc4ad608712360c5f"
+        "version": "a376e245f494b58365a4391a2568e6dd9da372c3453f4732eb6e15ebb9038451",
+        "signature": "a376e245f494b58365a4391a2568e6dd9da372c3453f4732eb6e15ebb9038451"
       },
       "../../node_modules/@types/node/net.d.ts": {
         "version": "ffe8912b7c45288810c870b768190c6c097459930a587dd6ef0d900a5529a811",
@@ -363,6 +363,7 @@
       "noUnusedParameters": true,
       "noImplicitReturns": true,
       "noFallthroughCasesInSwitch": true,
+      "removeComments": true,
       "composite": true,
       "sourceMap": true,
       "outDir": "./",
@@ -1673,7 +1674,6 @@
       "../../node_modules/@types/node/http2.d.ts",
       "../../node_modules/@types/node/https.d.ts",
       "../../node_modules/@types/node/inspector.d.ts",
-      "../../node_modules/@types/node/module.d.ts",
       "../../node_modules/@types/node/net.d.ts",
       "../../node_modules/@types/node/os.d.ts",
       "../../node_modules/@types/node/path.d.ts",
@@ -1695,21 +1695,22 @@
       "../../node_modules/@types/node/vm.d.ts",
       "../../node_modules/@types/node/worker_threads.d.ts",
       "../../node_modules/@types/node/zlib.d.ts",
-      "../../node_modules/@types/node/base.d.ts",
       "../../node_modules/@types/node/ts3.5/fs.d.ts",
       "../../node_modules/@types/node/ts3.5/util.d.ts",
       "../../node_modules/@types/node/ts3.5/globals.d.ts",
       "../../node_modules/@types/node/ts3.5/wasi.d.ts",
-      "../../node_modules/@types/node/ts3.5/index.d.ts",
       "../../node_modules/@types/minimatch/index.d.ts",
-      "../../node_modules/@types/glob/index.d.ts",
-      "../../node_modules/@types/shelljs/index.d.ts",
-      "./copy_assets.ts",
       "../../node_modules/@types/hapi__joi/index.d.ts",
       "../../node_modules/@types/mocha/index.d.ts",
       "../../node_modules/@types/strip-bom/index.d.ts",
       "../../node_modules/@types/strip-json-comments/index.d.ts",
-      "../../node_modules/@types/vscode/index.d.ts"
+      "../../node_modules/@types/vscode/index.d.ts",
+      "../../node_modules/@types/node/module.d.ts",
+      "../../node_modules/@types/node/base.d.ts",
+      "../../node_modules/@types/node/ts3.5/index.d.ts",
+      "../../node_modules/@types/glob/index.d.ts",
+      "../../node_modules/@types/shelljs/index.d.ts",
+      "./copy_assets.ts"
     ]
   },
   "version": "3.7.5"
